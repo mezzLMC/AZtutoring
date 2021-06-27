@@ -7,6 +7,8 @@
     --shadow-large: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
 }
 
+
+
 #app{
     left: 0;
     top: 0;
@@ -245,7 +247,95 @@
 
   }
   @media screen and (min-width: 1900px) {
-    .container {
-      width: 1870px;
-    }
+    
   }
+
+/* LAPTOP */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
+    #herobanner{
+        margin-top: -20px;
+    }
+    #herobIllu{
+        max-width: 750px;
+        margin-top: 10px;
+    }
+    #pave{
+        margin-top: 30px;
+    }
+    #technos{
+        max-width: 530px;
+        max-height: 120px;
+    }
+    .techno{
+        height: 130px;
+        margin-top: -5px;
+    }
+    #p2holder{
+        height: 10px;
+    }
+    #ppal{
+        width: 160px;
+    }
+    #zoom{
+        width: 120px;
+    }
+    #gagenda{
+        width: 90px;
+    }
+    #herobStart{
+        margin-top: -20px;
+    }
+    #technos{
+        margin-top: 10px;
+    }#reservationBody{
+        position: absolute;
+        left: 50%;
+        top: 135px;
+        transform: translateX(-50%);
+        bottom: 50px;
+        width: 90%;
+    }
+    #recap{
+        position: absolute;
+        height: 450px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 27%;
+        border: 2px solid var(--purple-dark);
+        border-radius: 10px;
+        width: 300px;
+    }
+    
+    #calendar{
+        border: 2px solid var(--purple-dark);
+        position: absolute;
+        height: 100%;
+        margin-left: 10px;
+        border-radius: 10px;
+        width: 70%
+    }
+    #validbut{
+        width: 80%;
+        height: 48px;
+        font: "inter";
+        font-weight: 400;
+        font-size: 28px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 15px;
+        bottom: 0;
+    }
+    .courseGroup{
+        font-size: 23px;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+    .courseGroup span{
+        font-size: 22ox;
+    }
+    #details{
+        font-size: 22px;
+    }
+    
+}
