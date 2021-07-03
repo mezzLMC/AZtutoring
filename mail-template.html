@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://go-study.fr/assets/css/components.css">
+    <link rel="stylesheet" href="https://go-study.fr/assets/css/mail.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-expand-lg" style="background-color: #6B4EFF;font-size: 15px;">
+        <div class="container-fluid">
+          <a class="navbar-brand title1" style="color:white;margin-left: 20px;" href="#">Ayoub Zalali</a>
+        </div>
+      </nav>
+      <div id="mailBody">
+        <span class="title1" style="font-size: 25px;">Bonjour <span id="name">{{NAME}}</span>,</span>
+        <br><br>
+        <p id="corpus" class="reg-nn-medium">
+          Cet e-mail automatique confirme votre/vos réservations aux horaires suivants:
+        <br>
+          <ul class="reg-nn-medium" id="schedules"> {{SCHEDULES}} </ul>
+        </p>
+        <p class="reg-nn-medium">Lien d'accès zoom pour la ou les cours:</p>
+        <br><span id="zoomLink" class="reg-nn-medium"> {{ZOOMLINK}} </span>
+      </div>
+    </div>
+  </body>
+</html>
