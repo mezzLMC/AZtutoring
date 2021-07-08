@@ -5,6 +5,7 @@
     --shadow-small: 0px 0px 1px rgba(20, 20, 20, 0.04), 0px 0px 8px rgba(20, 20, 20, 0.08);
     --shadow-medium: 0px 0px 1px rgba(20, 20, 20, 0.08), 0px 1px 8px 2px rgba(20, 20, 20, 0.08);
     --shadow-large: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
+    --c1 : #161618
 }
 
 
@@ -209,6 +210,17 @@
 
 }
 
+.test{
+    background: repeating-linear-gradient(-55deg, white,white 15px,#CDCFD0,#CDCFD0 20px);
+    margin-top:-6px;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    margin-top: 5px;
+    height: 115px;
+    transform: translateX(-50%);
+}
+
 #validbut{
     width: 80%;
     height: 7%;
@@ -234,6 +246,11 @@
     top: 200%;
 }
 
+.plainHour{
+    border-top: 3.5px solid #CDCFD0 !important;
+
+}
+
 
 @media screen and (min-width: 1400px) {
   }
@@ -244,7 +261,6 @@
       .regular-spaced {
           font-size: 40px;
       }
-
   }
   @media screen and (min-width: 1900px) {
     

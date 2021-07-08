@@ -222,7 +222,7 @@
         "0a96": function (t) {
             t.exports = JSON.parse(
                 '{"weekDays":["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],"months":["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"],"years":"Years","year":"Year","month":"Month","week":"Week","day":"Day","today":"Today","noEvent":"No Event","allDay":"All day","deleteEvent":"Delete","createEvent":"Create an event","dateFormat":"dddd MMMM D{S}, YYYY"}'
-            );
+            ); 
         },
         "0cb2": function (t, e, n) {
             var i = n("7b0b"),

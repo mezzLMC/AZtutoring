@@ -1,8 +1,35 @@
+
+let x1 = new Date("2021-07-03 12:00")
+let x2 = new Date("2021-07-03 13:30")
+let delta = ((x2.getTime() - x1.getTime())/ 1000)/1800*45;
+console.log(delta)
+
 var app = new Vue({
     el: '#app',
     data: {
       message: 'Hello Vue!',
-      selectedDate: new Date(new Date().getFullYear(), 11, 31)
+      selectedDate: new Date(),
+      events: [
+        {
+          start: x1,
+          end: x2,
+          content: '<div ></div>',
+          class: 'leisure'
+        },
+        {
+          start: "2021-07-05 12:00",
+          end: "2021-07-05 15:30",
+          content: '<div class="test"></div>',
+          class: 'leisure'
+        },
+        {
+          start: '2018-11-22',
+          end: '2018-11-22',
+          title: 'Dad\'s birthday!',
+          content: '<i class="v-icon material-icons">cake</i>',
+          class: 'sport'
+        }
+      ]
 
     },
     components: {'vue-cal': vuecal},
@@ -35,40 +62,43 @@ var slideUp = {
     opacity: null
 };
 
+
+
+
+
 months = ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
 
 window.onload = ()=>{
-    month = document.getElementsByClassName("vuecal__title")[0].children[0].innerHTML.split("(")[1].split(" 2")[0]
-    nMonth = months.indexOf(month + 1)
-    document.getElementsByClassName("vuecal__menu")[0].remove()
-    document.getElementsByClassName("vuecal__title-bar")[0].remove()
-    document.getElementsByClassName("vuecal__time-cell-label")[0].style["color"] = "transparent"
+    months = document.getElementsByClassName("vuecal__title")[0].children[0].innerHTML.split("(")[1].split(" 2")[0].split(" - ")
     let cellArray = Array.from(document.getElementsByClassName("vuecal__time-cell"))
+    //document.getElementsByClassName("vuecal__menu")[0].remove()
+    //document.getElementsByClassName("vuecal__title-bar")[0].remove()
+    document.getElementsByClassName("vuecal__time-cell-label")[0].style["color"] = "transparent"
+    weekDays = Array.from(document.getElementsByClassName("weekday-label"))
+    let lineArr = Array.from(document.getElementsByClassName("vuecal__time-cell-line"))
+    let labelArr = Array.from(document.getElementsByClassName("vuecal__time-cell-label"))
+
     cellArray.forEach(e=>{
         e.style.height="45px"
     })
     cellArray[cellArray.length-1].style.display = "none"
-    Array.from(document.getElementsByClassName("weekday-label")).forEach(e=>{
+
+    if(months[1]){
+        console.log(months[1])
+    }
+    weekDays.forEach(e=>{
         target = e.children[3]
-        target.innerHTML = "<br/>" + target.innerHTML + "." + nMonth
+        target.innerHTML = "<br/>" + target.innerHTML + "."
         target.classList.add("date")
     })
-    console.log("pute")
-    Array.from(document.getElementsByClassName("vuecal__time-cell-line")).forEach(e=>{
-        e.classList.add("chicha")
+
+    lineArr.forEach(e=>{
+        n = lineArr.indexOf(e) 
+        if((n + 1) % 2 == 0) e.classList.add("plainHour")
+        else labelArr[n].innerHTML=""
     })
 }
 
 
 
-let n = 0
-let moveInterval = window.setInterval(() => {
-    technoArray = document.getElementsByClassName("techno")
-    explainArray = document.getElementsByClassName("technoExplain")
-    technoArray[n].classList.remove("active")
-    explainArray[n].classList.remove("active")
-    n == 2 ? n = 0 : n=n+1 
-    technoArray[n].classList.add("active")
-    explainArray[n].classList.add("active")
 
-}, 5000);

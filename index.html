@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="/vuecal.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="components.css" />
@@ -86,7 +87,7 @@
 
         <div class="row" id="reservationBody">
           <div class="col-sm " id="calendar">
-            <vue-cal :hide-weekdays="[7]"  :time-step="30" :time-from="21 * 30" :time-to="32 * 30" :disable-views="['years', 'year', 'month', 'day']" />
+            <vue-cal  :selected-date="selectedDate" :hide-weekdays="[7]"  :time-step="30" :time-from="21 * 30" :time-to="32 * 30"  :events="events" />
           </div>
           <div class="col-sm" id="recap">
             <p id="recapitulatif">Récapitulatif</p>
